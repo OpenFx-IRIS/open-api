@@ -6,15 +6,19 @@
 
 ## 1. before settings
 ### install on server
-`npm`
-`npx`
+`npm`  
+`npx`  
 
 ### for react packages
-`npm install gh-pages --save-dev`
-`npm install react-router-dom`
-`npm install cross-env --dev`
+`npm install gh-pages --save-dev`  
+`npm install react-router-dom`  
+`npm install cross-env --dev`  
 
 ## 2. build & deploy
+### initial npm install
+```
+$ npm install
+```
 ### localhost deploy
 ```
 $ npm start
