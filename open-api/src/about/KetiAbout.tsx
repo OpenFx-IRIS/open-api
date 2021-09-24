@@ -1,12 +1,11 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React, { Component } from "react";
 
-class KetiAbout extends React.Component {
+class KetiAbout extends Component {
   render() {
     return (
-      <>
-        <Container>about page</Container>
-      </>
+      <div>
+        <h3>about page</h3>
+      </div>
     );
   }
 }

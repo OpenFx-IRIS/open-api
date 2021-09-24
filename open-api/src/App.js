@@ -1,37 +1,22 @@
 import React from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { BrowserRouter, Route } from "react-router-dom";
+import KetiNavigator from "./nav/KetiNavigator";
+import KetiAbout from "./about/KetiAbout";
+import KetiGuide from "./guide/KetiGuide";
+import KetiOpenApi from "./openapi/KetiOpenApi";
 
 class App extends React.Component {
   render() {
     return (
-      <>
-        <Navbar bg="light" expand="lg">
-          <Container>
-            <Navbar.Brand href="#home">KETI OpenFx OPEN API</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Something
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-        <Container>hello</Container>
-      </>
+      <div className="App">
+        <KetiNavigator />
+        <BrowserRouter basename="/open-api">
+          <Route path="/" component={KetiAbout}></Route>
+          <Route path="/about" component={KetiAbout}></Route>
+          <Route path="/guide" component={KetiGuide}></Route>
+          <Route path="/open-api" component={KetiOpenApi}></Route>
+        </BrowserRouter>
+      </div>
     );
   }
 }

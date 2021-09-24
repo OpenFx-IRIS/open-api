@@ -3,11 +3,7 @@ import { Container } from "react-bootstrap";
 
 class KetiGuide extends React.Component {
   render() {
-    return (
-      <>
-        <Container>guide page</Container>
-      </>
-    );
+    return <Container>guide page</Container>;
   }
 }
 
