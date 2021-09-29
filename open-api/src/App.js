@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <KetiNavigator />
-        <BrowserRouter>
+        <BrowserRouter basename="/open-api">
           <Route path="/" component={BlankPage}></Route>
           <Route path="/about" component={KetiAbout}></Route>
           <Route path="/guide" component={KetiGuide}></Route>
