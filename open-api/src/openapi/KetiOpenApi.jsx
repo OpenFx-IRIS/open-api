@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Accordion, Card, Button, Container } from "react-bootstrap";
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
 import AccordionContext from "react-bootstrap/AccordionContext";
+import SendApiComponent from "../openapi/SendApiComponent";
 
 function ContextAwareToggle({ children, eventKey, callback }) {
   const { activeEventKey } = useContext(AccordionContext);
@@ -35,13 +36,15 @@ class KetiOpenApi extends React.Component {
               {"   /function/py-package"}
             </Card.Header>
             <Accordion.Collapse eventKey="0">
-              <Card.Body>call to /function/py-package</Card.Body>
+              <Card.Body>
+                <SendApiComponent></SendApiComponent>
+              </Card.Body>
             </Accordion.Collapse>
           </Card>
           <Card>
             <Card.Header style={{ backgroundColor: "#D9F0E6" }}>
               <ContextAwareToggle eventKey="1">POST</ContextAwareToggle>
-              {"   /function/py-package20"}
+              {"   /function/py-iris"}
             </Card.Header>
             <Accordion.Collapse eventKey="1">
               <Card.Body>call to /function/py-package20</Card.Body>
