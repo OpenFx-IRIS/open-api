@@ -47,7 +47,16 @@ class KetiOpenApi extends React.Component {
               {"   /function/py-iris"}
             </Card.Header>
             <Accordion.Collapse eventKey="1">
-              <Card.Body>call to /function/py-package20</Card.Body>
+              <Card.Body>call to /function/py-iris</Card.Body>
+            </Accordion.Collapse>
+          </Card>
+          <Card>
+            <Card.Header style={{ backgroundColor: "#D9F0E6" }}>
+              <ContextAwareToggle eventKey="1">POST</ContextAwareToggle>
+              {"   /function/smote-api"}
+            </Card.Header>
+            <Accordion.Collapse eventKey="1">
+              <Card.Body>call to /function/smote-api</Card.Body>
             </Accordion.Collapse>
           </Card>
         </Accordion>
@@ -55,56 +64,5 @@ class KetiOpenApi extends React.Component {
     );
   }
 }
-
-// class ContextAwareToggle extends React.Component<{ eventKey: string }> {
-//   constructor(props: { eventKey: string }) {
-//     super(props);
-//     this.state = {};
-//   }
-//   render() {
-//     const decoratedOnClick = useAccordionButton(this.props.eventKey, () =>
-//       console.log("totally custom!", this.props.eventKey)
-//     );
-//     return (
-//       <>
-//         <Alert variant="success">
-//           <Button variant="success" type="button" onClick={decoratedOnClick}>
-//             POST
-//           </Button>
-//           {"   /function/py-package"}
-//         </Alert>
-//       </>
-//     );
-//   }
-// }
-//
-// class KetiOpenApi extends React.Component {
-//   render() {
-//     return (
-//       <>
-//         <Container>
-//           <Accordion defaultActiveKey="0">
-//             <Card>
-//               <Card.Header>
-//                 <ContextAwareToggle eventKey="0">Click me!</ContextAwareToggle>
-//               </Card.Header>
-//               <Accordion.Collapse eventKey="0">
-//                 <Card.Body>Hello! I&apos;m the body</Card.Body>
-//               </Accordion.Collapse>
-//             </Card>
-//             <Card>
-//               <Card.Header>
-//                 <ContextAwareToggle eventKey="1">Click me!</ContextAwareToggle>
-//               </Card.Header>
-//               <Accordion.Collapse eventKey="1">
-//                 <Card.Body>Hello! I&apos;m another body</Card.Body>
-//               </Accordion.Collapse>
-//             </Card>
-//           </Accordion>
-//         </Container>
-//       </>
-//     );
-//   }
-// }
 
 export default KetiOpenApi;
