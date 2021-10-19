@@ -10,7 +10,7 @@ const App = () => {
       <KetiNavigator />
       <Route exact path="/" component={Guide} />
       <Route path="/guide" component={Guide} />
-      <Route path="/open-api" component={KetiOpenApi} />
+      <Route path="/api" component={KetiOpenApi} />
     </BrowserRouter>
   );
 };
