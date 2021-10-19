@@ -56,5 +56,5 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.0"
   },
-  "homepage": "https://OpenFx-IRIS.github.io/open-api"
+  "homepage": "http://OpenFx-IRIS.github.io/open-fx"
 }
