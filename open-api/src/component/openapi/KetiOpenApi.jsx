@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Accordion, Card, Button, Container } from "react-bootstrap";
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
 import AccordionContext from "react-bootstrap/AccordionContext";
-import SendApiComponent from "../openapi/SendApiComponent";
+import SendApiComponent from "./SendApiComponent";
 
 function ContextAwareToggle({ children, eventKey, callback }) {
   const { activeEventKey } = useContext(AccordionContext);
