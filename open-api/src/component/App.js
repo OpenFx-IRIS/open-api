@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import KetiNavigator from "./component/nav/KetiNavigator";
-import KetiOpenApi from "./component/openapi/KetiOpenApi";
-import Guide from "./component/openapi/Guide";
+import KetiNavigator from "./nav/KetiNavigator";
+import KetiOpenApi from "./openapi/KetiOpenApi";
+import Guide from "./openapi/Guide";
 
 const App = () => {
   return (
