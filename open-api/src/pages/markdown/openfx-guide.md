@@ -16,8 +16,8 @@ kubeadm reset
 #work01, work02
 kubeadm reset
 
-# on debian base 
-sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube* 
+# on debian base
+sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube*
 
 sudo apt-get autoremove
 
@@ -97,7 +97,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 ```bash
 kubectl -n kube-system edit configmap coredns
->> `loop` 삭제 
+>> `loop` 삭제
 
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/k8s-manifests/kube-flannel-rbac.yml
@@ -155,7 +155,7 @@ systemctl restart docker
 E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
 E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
 
- 
+
 
 위 에러를 아래와 같이 해결했습니다.
 
@@ -192,7 +192,7 @@ make: *** [push] Error 1
 ### 3) k8s node : NotReady → Ready
 
 ```bash
-# troubleshooting 01 : Status NotReady 
+# troubleshooting 01 : Status NotReady
 kubectl describe nodes
 # => hostname별 message 확인
 # Ready            False   Fri, 06 Aug 2021 15:02:44 +0900   Thu, 05 Aug 2021 15:03:54 +0900   KubeletNotReady              container runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady message:docker: network plugin is not ready: cni config uninitialized
